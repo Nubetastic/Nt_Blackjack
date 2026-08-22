@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nt Blackjack</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main id="blackjack" class="blackjack hidden" aria-live="polite">
+        <section class="table-layout">
+            <aside class="panel players-panel">
+                <div class="panel-heading">
+                    <span>Players</span>
+                    <span id="player-count" class="muted">0</span>
+                </div>
+                <div id="players-list" class="players-list"></div>
+            </aside>
+
+            <section class="play-area">
+                <div class="dealer-zone panel">
+                    <div class="zone-title">
+                        <div>
+                            <p class="eyebrow">DEALER</p>
+                            <h2 id="dealer-total">Showing 0</h2>
+                        </div>
+                        <span id="dealer-rule" class="rule-chip">Stands on soft 17</span>
+                    </div>
+                    <div id="dealer-cards" class="cards"></div>
+                </div>
+
+                <div class="world-view" aria-hidden="true"></div>
+
+                <div class="player-zone panel">
+                    <div class="zone-title">
+                        <div>
+                            <p class="eyebrow">YOUR HAND</p>
+                            <h2 id="player-name">Player</h2>
+                        </div>
+                        <div class="bankroll">
+                            <span>Cash</span>
+                            <strong id="cash-value">$0</strong>
+                        </div>
+                    </div>
+                    <div id="player-hands" class="player-hands"></div>
+                </div>
+            </section>
+
+            <aside class="panel action-panel">
+                <div class="action-header">
+                    <div>
+                        <p class="eyebrow">HOUSE TABLE</p>
+                        <h1 id="table-name">Blackjack</h1>
+                    </div>
+                    <div class="round-status">
+                        <span id="state-label">Waiting</span>
+                        <span id="timer"></span>
+                    </div>
+                </div>
+                <div id="turn-banner" class="turn-banner">Waiting for players</div>
+                <div class="table-details">
+                    <div class="felt-mark">
+                        <span>BETTING OUTLINE</span>
+                        <strong>MAX <span id="outline-max-bet">$100</span></strong>
+                        <small>BLACKJACK <span id="payout-label">3 TO 2</span> &bull; <span id="outline-bet-step">$2</span> STEPS</small>
+                    </div>
+                    <div class="shoe-status">
+                        <span id="shoe-cards">0 cards in shoe</span>
+                        <span id="shuffle-status">Fresh shuffle</span>
+                    </div>
+                </div>
+                <div class="panel-heading actions-heading">Actions</div>
+                <div id="actions" class="actions"></div>
+                <div class="rules-summary">
+                    <div><span>Minimum</span><strong id="minimum-bet">$0</strong></div>
+                    <div><span>Maximum</span><strong id="maximum-bet">$0</strong></div>
+                    <div><span>Bet step</span><strong id="bet-step">$0</strong></div>
+                </div>
+                <button id="camera-button" class="text-button camera-button" type="button">First-person camera</button>
+                <button id="leave-button" class="text-button danger leave-button" type="button">Leave table</button>
+                <div class="scale-control">
+                    <label for="ui-scale">
+                        <span>Panel scale</span>
+                        <strong id="ui-scale-value">100%</strong>
+                    </label>
+                    <input id="ui-scale" type="range" min="100" max="150" step="5" value="100" aria-label="Panel scale">
+                </div>
+            </aside>
+        </section>
+
+        <div id="card-style-picker" class="modal hidden">
+            <div class="modal-card">
+                <p class="eyebrow">TABLE CARDS</p>
+                <h2>Choose a card style</h2>
+                <p>This style will be used for the dealer and every player at this table.</p>
+                <div id="card-style-options" class="card-style-options"></div>
+            </div>
+        </div>
+
+        <div id="confirm-leave" class="modal hidden">
+            <div class="modal-card">
+                <p class="eyebrow">LEAVE TABLE</p>
+                <h2>Leave this Blackjack session?</h2>
+                <p>An active wager is forfeited if you leave before settlement.</p>
+                <div class="modal-actions">
+                    <button id="cancel-leave" class="text-button" type="button">Stay</button>
+                    <button id="confirm-leave-button" class="action-button danger" type="button">Leave</button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="prop-editor" class="prop-editor hidden" aria-label="Prop placement editor">
+        <div class="prop-editor-help">
+            <strong>PROP PLACEMENT</strong>
+            <span>Drag an arrow to move · Drag a ring to rotate</span>
+            <span>/saveprop to save · Esc to close editor</span>
+        </div>
+        <svg id="prop-gizmo" class="prop-gizmo" width="100%" height="100%">
+            <g data-mode="translate" data-axis="x" class="gizmo-axis gizmo-x"><line/><circle r="8"/></g>
+            <g data-mode="translate" data-axis="y" class="gizmo-axis gizmo-y"><line/><circle r="8"/></g>
+            <g data-mode="translate" data-axis="z" class="gizmo-axis gizmo-z"><line/><circle r="8"/></g>
+            <g data-mode="rotate" data-axis="x" class="gizmo-rotation gizmo-x"><polyline/></g>
+            <g data-mode="rotate" data-axis="y" class="gizmo-rotation gizmo-y"><polyline/></g>
+            <g data-mode="rotate" data-axis="z" class="gizmo-rotation gizmo-z"><polyline/></g>
+            <circle id="gizmo-origin" class="gizmo-origin" r="6"/>
+        </svg>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
