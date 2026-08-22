@@ -17,7 +17,6 @@ Server-authoritative multiplayer Blackjack for RedM with RSG Core and VORP cash 
 
 ## Requirements
 
-- RedM  
 - RSG Core or VORP  
 
 ## Setup
