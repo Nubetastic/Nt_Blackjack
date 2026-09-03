@@ -1,6 +1,6 @@
 # Nt_BlackJack
 
-## [Showcase](https://www.youtube.com/watch?v=D0u9JJw7kyE)
+## [Showcase](https://www.youtube.com/watch?v=9OFtIQSpViY)
 
 Server-authoritative multiplayer Blackjack for RedM with RSG Core and VORP cash support.
 
