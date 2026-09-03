@@ -1541,7 +1541,7 @@ commandHandlers.selectCardStyle = function(game, command)
     local source = command.source
     if not game or game.cardStyle or game.cardStyleChooser ~= source then return end
     local style = command.style
-    if not ConfigProps.Cards.cardEndings[style] or not ConfigProps.Cards.DeckEndings[style] or not ConfigProps.Cards.NuiEndings[style] then return end
+    if not ConfigProps.Cards.cardEndings[style] or not ConfigProps.Cards.DeckEndings[style] then return end
     game.cardStyle = style
     game.cardStyleChooser = nil
     sendViews(game)

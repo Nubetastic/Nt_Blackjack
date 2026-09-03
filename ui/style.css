@@ -882,7 +882,7 @@ h2 {
 }
 
 .mini-card-crop {
-    width: clamp(30px, 4.64vh, 51px);
+    aspect-ratio: 15 / 22;
     height: clamp(42px, 6.5vh, 71px);
     margin-left: clamp(-9px, -0.4vw, -4px);
     border-radius: 3px;
@@ -898,8 +898,6 @@ h2 {
     height: 100%;
     object-fit: contain;
     object-position: top left;
-    transform: scale(3.16);
-    transform-origin: top left;
     display: block;
 }
 

@@ -252,24 +252,12 @@
         .replaceAll("'", "&#039;");
 
     const money = (value) => `$${Math.round(Number(value) || 0)}`;
-
-    const cardImages = {
-        "Blackwater": { folder: "Blackwater", ending: "Bla" },
-        "Valentine": { folder: "Valentine", ending: "Val" },
-        "Saint Denis": { folder: "Saint Denis", ending: "Std" },
-        "Rhodes": { folder: "Rhodes", ending: "Rho" },
-        "Camp": { folder: "Camp", ending: "Camp" },
-        "Vanhorn": { folder: "Vanhorn", ending: "Van" },
-        "RRS": { folder: "RRS", ending: "RRS" },
-        "New": { folder: "New", ending: "New" },
-    };
+    const cardSuits = { c: "CLUBS", d: "DIAMONDS", h: "HEARTS", s: "SPADES" };
 
     function cardPath(card) {
-        const image = cardImages[game.cardStyle];
-        const deckFolder = image.folder.replaceAll(" ", "_");
-        if (!card || !card.isRevealed) return `img/card/${deckFolder}/Back_${image.ending}.png`;
+        if (!card || !card.isRevealed) return "img/BACK.png";
         const royalty = card.royalty === "T" ? "10" : card.royalty;
-        return `img/card/${deckFolder}/${royalty}_${card.suit.toUpperCase()}_${image.ending}.png`;
+        return `img/${royalty}_${cardSuits[card.suit]}.png`;
     }
 
     function cardsHtml(cards, className = "card") {

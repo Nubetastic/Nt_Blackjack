@@ -126,16 +126,6 @@ ConfigProps.Cards = {
         --["GK"] = "tgk",
         ["New"] = "new",
     },
-    NuiEndings = {
-        ["Blackwater"] = "Bla",
-        ["Valentine"] = "Val",
-        ["Saint Denis"] = "Std",
-        ["Rhodes"] = "Rho",
-        ["Camp"] = "Camp",
-        ["Vanhorn"] = "Van",
-        ["RRS"] = "RRS",
-        ["New"] = "New",
-    },
     HitOffset = { x = 0.025, y = 0.05, z = 0.001, h = 0.0 }, -- use card 2 offset and adds this to the hit card.
     DealerHitOffset = { x = 0.15, y = 0.05, z = 0.001, h = 0.0 }, -- use card 2 offset and adds this to the hit card.
     SplitOffset = { x = 0.10, y = 0, z = 0.001, h = 0.0 },

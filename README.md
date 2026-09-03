@@ -34,5 +34,3 @@ Duplicate an existing entry in `Config.Tables`, give it a unique key, and replac
 
 This project's source code is licensed under the GNU General Public License v3.0 (GPL-3.0). See the LICENSE file for details.  
 This software is provided WITHOUT ANY WARRANTY. See the GNU GPLv3 for details.  
-
-Images and screenshots derived from Red Dead Redemption 2 are not covered by this license and remain the property of their respective rights holders. Red Dead Redemption 2 © Rockstar Games / Take-Two Interactive.
