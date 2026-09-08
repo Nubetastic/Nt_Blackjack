@@ -12,7 +12,7 @@ Server-authoritative multiplayer Blackjack for RedM with RSG Core and VORP cash 
 - Dealer peek, configurable soft-17 behavior, 3:2 blackjack payouts, and pushes  
 - Server-side cards, action validation, cash debits, and payouts  
 - PolyZone pulled NPC players and spectator rendering  
-- Full-screen NUI with bundled card styles, camera controls, and UI scaling  
+- Full-screen NUI with custom cards, camera controls, and UI scaling  
 - Additional tables can be added by duplicating a single keyed config entry  
 
 ## Requirements
