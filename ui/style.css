@@ -22,7 +22,7 @@ body {
     overflow: hidden;
     background-color: rgba(0, 0, 0, 0) !important;
     color: var(--ink);
-    font-family: 'RDRLino-Regular', cursive;
+    font-family: Arial, sans-serif;
     user-select: none;
 }
 
